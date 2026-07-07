@@ -1,0 +1,313 @@
+/*#
+@colors&{"titlesAccentColor":"#494949","labelsAccentColor":"#7b7a7a","linksAccentColor":"#2372de","backgroundAccentColor":"#ffffff","isDefault":false}&colors@
+@info@STYLES BASKET SELECTIONS METADATA@info@
+@name&styles_basket&name@
+@aspects&wh-tiles,hazard-content-border,tasks-labels-yes,tasks-style-bullets,tasks-layout-burger-background,tasks-colors-background-light,theme-fonts-arial,content-font-size-10,title-font-size-small,titles-borders-underlined,between-elements-extra-small,unordered-list-bullet-disc,notes-style-borders-box,notes-colors-gray,links-style-underline,related-links-background-accent-color-rounded-dark,page-size-a4,page-margin-0-50,pdf-cover-selector,pdf-cover-title-horizontal-alignment-left,pdf-cover-title-vertical-alignment-center,initial-page-print,toc-numbering-deep-chapter-scope,left-pages-header-all-without-page-number,right-pages-header-all-without-page-number,left-pages-footer-page,right-pages-footer-page,glossary-sort-group-sorted,index-columns-three,theme-color-light,pdf-cover-title-colors-white-title&aspects@
+@info@WARNING: PLEASE DON'T MODIFY THIS FILE. MODIFICATION CAN CAUSE UPLOADING ERRORS@info@
+@info@TIP: YOU CAN USE custom.css TO ADD CUSTOM SELECTORS.@info@
+#*/
+@media print {
+  @page front-page {
+    background-image: url("resources/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+/* Bold selection in Publication TOC. WebHelp only. */
+@media screen {
+  .wh_publication_toc .active > .topicref a {
+    font-weight: bold;
+  }
+}
+/*theme-color-light*/
+.topictitle1,
+.topictitle2,
+.topictitle3,
+.topictitle4,
+.topictitle5,
+.topictitle6,
+*[class~='front-page/front-page-title'],
+*[class~="toc/title"],
+*[class~="placeholder/figurelist"] > *[class~="topic/title"],
+*[class~="placeholder/tablelist"] > *[class~="topic/title"],
+*[class~="index/groups"]::before {
+  color: #000080;
+}
+*[class~='topic/shortdesc']:before {
+  color: #7b7a7a;
+}
+*[class~='topic/xref'],
+*[class~='topic/link'] {
+  color: #5185cb;
+}
+a,
+a:hover,
+a:visited,
+.related-links a,
+.related-links a:visited {
+  color: #5185cb;
+}
+.webhelp_full_width_link,
+.webhelp_expand_collapse_sections,
+.wh_hide_highlight,
+.wh_print_link button,
+.oxy-icon-pdf-link,
+.wh-md-menu-button {
+  color: #5185cb;
+}
+*[class~='topic/table'] th {
+  background-color: #eeeeee;
+}
+/*theme-fonts-arial*/
+@page {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+.topictitle1,
+.topictitle2,
+*[class~='front-page/front-page-title'],
+*[class~="toc/title"],
+*[class~='topic/title'],
+*[class~='topic/thead'],
+*[class~="placeholder/figurelist"],
+*[class~="placeholder/tablelist"],
+*[class~="index/groups"]::before,
+*[class~="index/group"] > *[class~="index/label"],
+.wh_publication_title,
+.wh_top_menu,
+.wh_tile_title .topicref,
+.wh_main_page_toc_entry .topicref,
+.wh_index_terms span.wh_first_letter,
+.wh-letters li a {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+*[class~="map/topicref"] {
+  font-family: 'Arial', sans-serif;
+}
+.topictitle3,
+.topictitle4,
+.topictitle5,
+.topictitle6 {
+  font-family: 'Arial', sans-serif;
+}
+body {
+  font-family: 'Arial', sans-serif;
+}
+/*title-font-size-small*/
+.topictitle1,
+*[class~='toc/title'],
+*[class~="placeholder/figurelist"] > *[class~="topic/title"],
+*[class~="placeholder/tablelist"] > *[class~="topic/title"],
+*[class~="index/groups"]::before {
+  font-size: 17pt;
+}
+.topictitle2 {
+  font-size: 14pt;
+}
+.topictitle3,
+.topictitle4,
+.topictitle5,
+.topictitle6 {
+  font-size: 11pt;
+}
+/*content-font-size-10*/
+body {
+  font-size: 10pt;
+}
+/*titles-borders-underlined*/
+.topictitle1,
+.topictitle2:not(*[class ~= "glossentry/glossterm"]),
+*[class~="toc/title"],
+*[class~="placeholder/figurelist"] > *[class~="topic/title"],
+*[class~="placeholder/tablelist"] > *[class~="topic/title"],
+*[class~="index/groups"]::before {
+  border-bottom: 1px solid;
+  padding-bottom: 0.25em;
+}
+/*between-elements-extra-small*/
+*[class~='topic/p'],
+*[class~='topic/lq'],
+*[class~='topic/note'],
+*[class~='topic/dl'],
+*[class~='topic/ul'],
+*[class~='topic/ol'],
+*[class~='topic/li'],
+*[class~='topic/sl'],
+*[class~='topic/pre'],
+*[class~='topic/lines'],
+*[class~='topic/fig'],
+*[class~='topic/table'],
+*[class~='topic/simpletable'],
+*[class~='topic/section'],
+*[class~='topic/example'] {
+  margin: 0.5em 0;
+}
+/*unordered-list-bullet-disc*/
+*[class="- topic/ul ul"] > *[class="- topic/li li"] {
+  list-style-type: disc;
+}
+/*hazard-content-border*/
+*[class~="hazard-d/hazardstatement"] th,
+*[class~="hazard-d/hazardstatement"] td {
+  border: 0;
+}
+/*notes-style-borders-box*/
+*[class~="topic/note"]:not([class~="hazard-d/hazardstatement"]) {
+  border: 1px solid;
+  border-radius: 11px;
+}
+/*notes-colors-gray*/
+*[class~="topic/note"]:not([class~="hazard-d/hazardstatement"]) {
+  background-color: lightgray;
+}
+/*links-style-underline*/
+*[class~='topic/xref'],
+*[class~='topic/link'] {
+  text-decoration: underline;
+}
+*[class~='topic/xref']:hover,
+*[class~='topic/link']:hover {
+  text-decoration: underline;
+}
+.related-links a,
+.related-links a:visited,
+a,
+a:visited {
+  text-decoration: underline;
+}
+.related-links a:hover,
+a:hover {
+  text-decoration: underline;
+}
+/*related-links-background-accent-color-rounded-dark*/
+*[class~="topic/linklist"] {
+  padding: 15px;
+  background-color: #bbbbbb;
+  border-radius: 15px;
+}
+/*tasks-labels-yes*/
+/*tasks-style-bullets*/
+ol[class~="task/steps"] {
+  counter-reset: step;
+  list-style-type: none;
+}
+ol[class~="task/steps"] > *[class~="task/step"] {
+  position: relative;
+  line-height: 1.7;
+}
+@media screen {
+  ol[class~="task/steps"] > *[class~="task/step"]:before {
+    counter-increment: step;
+    content: counter(step);
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    left: -1.8em;
+    top: 0.15em;
+    background-color: black;
+    color: white;
+  }
+}
+@media print {
+  *[class~="task/step"] {
+    padding-left: 0.25em;
+  }
+  ol[class~="task/steps"] > *[class~="task/step"]::marker {
+    counter-increment: step;
+    content: counter(step);
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: black;
+    color: white;
+  }
+}
+/*tasks-layout-burger-background*/
+ol[class~="task/steps"] {
+  border-top: 5px solid #eeeeee;
+  border-bottom: 5px solid #eeeeee;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+/*tasks-colors-background-light*/
+ol[class~="task/steps"] {
+  background-color: #ffffff;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+/*page-size-a4*/
+@media print {
+  @page {
+    size: A4;
+  }
+}
+/*page-margin-0-50*/
+@media print {
+  @page {
+    margin: 0.5in;
+  }
+}
+/*pdf-cover-selector*/
+/*pdf-cover-title-horizontal-alignment-left*/
+*[class~="front-page/front-page-title"] > *[class~="topic/title"] {
+  text-align: left;
+}
+/*pdf-cover-title-vertical-alignment-center*/
+*[class~="front-page/front-page-title"] {
+  padding-top: 20%;
+}
+/*pdf-cover-title-colors-white-title*/
+*[class~="front-page/front-page-title"] > *[class~="topic/title"] {
+  color: white;
+  background-color: transparent;
+}
+*[class~="bookmap/booktitle"] {
+  padding: 0.5em;
+}
+/*initial-page-print*/
+@page chapter {
+  -oxy-initial-page-number: auto-odd;
+}
+/*toc-numbering-deep-chapter-scope*/
+/*left-pages-header-all-without-page-number*/
+@page :left {
+  @top-left {
+    content: string(maptitle) string(parttitle) string(chaptertitle) string(sectiontitle);
+  }
+}
+/*right-pages-header-all-without-page-number*/
+@page :right {
+  @top-right {
+    content: string(maptitle) string(parttitle) string(chaptertitle) string(sectiontitle);
+  }
+}
+/*left-pages-footer-page*/
+@page :left {
+  @bottom-left {
+    content: "Page " counter(page);
+  }
+}
+/*right-pages-footer-page*/
+@page :right {
+  @bottom-right {
+    content: "Page " counter(page);
+  }
+}
+/*glossary-sort-group-sorted*/
+/*index-columns-three*/
+@media print {
+  @page index {
+    column-count: 3;
+  }
+}
+/*wh-tiles*/
+
